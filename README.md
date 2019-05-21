@@ -42,7 +42,7 @@ public function register()
 
 ### Commands
 
-Below you can find all the commands that you can use
+Below you can find all the commands that you can use.
 
 ```bash
 php artisan make:service ExampleService
