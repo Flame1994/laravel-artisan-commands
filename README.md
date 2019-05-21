@@ -1,6 +1,6 @@
 ## Laravel 5 Custom Artisan Commands
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Latest Stable Version][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE)
 [![Total Stars][ico-stars]][link-stars]
 [![Total Downloads][ico-downloads]][link-downloads]
@@ -53,9 +53,9 @@ php artisan make:service ExampleService
 The Laravel Artisan Commands is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 
-[ico-version]: https://img.shields.io/packagist/v/barryvdh/laravel-ide-helper.svg?style=flat-square
+[ico-version]: https://poser.pugx.org/rhaarhoff/laravel-artisan-commands/v/stable
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/barryvdh/laravel-ide-helper.svg?style=flat-square
+[ico-downloads]: https://poser.pugx.org/rhaarhoff/laravel-artisan-commands/downloads
 [ico-stars]: https://img.shields.io/github/stars/Flame1994/laravel-artisan-commands.svg
 
 [link-packagist]: https://packagist.org/packages/rhaarhoff/laravel-artisan-commands
