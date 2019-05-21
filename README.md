@@ -1,8 +1,8 @@
 ## Laravel 5 Custom Artisan Commands
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
+[![Software License][ico-license]](LICENSE)
+[![Total Stars][ico-stars]][link-stars]
 [![Total Downloads][ico-downloads]][link-downloads]
 
 ### Description
@@ -55,15 +55,9 @@ The Laravel Artisan Commands is open-sourced software licensed under the [MIT li
 
 [ico-version]: https://img.shields.io/packagist/v/barryvdh/laravel-ide-helper.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/barryvdh/laravel-ide-helper/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/barryvdh/laravel-ide-helper.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/barryvdh/laravel-ide-helper.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/barryvdh/laravel-ide-helper.svg?style=flat-square
+[ico-stars]: https://img.shields.io/github/stars/Flame1994/laravel-artisan-commands.svg
 
-[link-packagist]: https://packagist.org/packages/barryvdh/laravel-ide-helper
-[link-travis]: https://travis-ci.org/barryvdh/laravel-ide-helper
-[link-scrutinizer]: https://scrutinizer-ci.com/g/barryvdh/laravel-ide-helper/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/barryvdh/laravel-ide-helper
-[link-downloads]: https://packagist.org/packages/barryvdh/laravel-ide-helper
-[link-author]: https://github.com/barryvdh
-[link-contributors]: ../../contributors
+[link-packagist]: https://packagist.org/packages/rhaarhoff/laravel-artisan-commands
+[link-downloads]: https://packagist.org/packages/rhaarhoff/laravel-artisan-commands
+[link-stars]: https://github.com/Flame1994/laravel-artisan-commands
