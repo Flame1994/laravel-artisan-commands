@@ -25,7 +25,7 @@ Rhaarhoff\LaravelArtisanCommands\CommandServiceProvider::class,
 
 Run dump-autoload
 ```bash
-composer dum-autoload
+composer dump-autoload
 ```
 
 In Laravel, instead of adding the service provider in the `config/app.php` file, you can add the following code to your `app/Providers/AppServiceProvider.php` file, within the `register()` method:
