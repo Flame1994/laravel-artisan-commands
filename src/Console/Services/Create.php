@@ -1,5 +1,5 @@
 <?php
-namespace rhaarhoff\fouricommands\Console\Services;
+namespace rhaarhoff\artisan-commands\Console\Services;
 use Illuminate\Console\Command;
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Database\DatabaseManager;
