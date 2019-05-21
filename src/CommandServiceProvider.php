@@ -1,6 +1,6 @@
 <?php
 
-namespace rhaarhoff\artisan-commands;
+namespace Rhaarhoff\LaravelArtisanCommands;
 
 use Illuminate\Support\ServiceProvider;
 

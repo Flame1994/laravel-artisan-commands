@@ -1,10 +1,6 @@
 <?php
-namespace rhaarhoff\artisan-commands\Console\Services;
-use Illuminate\Console\Command;
+namespace Rhaarhoff\LaravelArtisanCommands\Console\Services;
 use Illuminate\Console\GeneratorCommand;
-use Illuminate\Database\DatabaseManager;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\DB;
 class Create extends GeneratorCommand
 {
     /**
