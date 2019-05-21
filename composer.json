@@ -1,6 +1,8 @@
 {
     "name": "rhaarhoff/laravel-artisan-commands",
     "description": "Artisan commands for easier use",
+    "keywords": ["laravel", "commands"],
+    "license": "MIT",
     "type": "commands",
     "authors": [
         {
