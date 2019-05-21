@@ -1,7 +1,6 @@
 <?php
 
 namespace Rhaarhoff\LaravelArtisanCommands;
-
 use Illuminate\Support\ServiceProvider;
 
 class CommandServiceProvider extends ServiceProvider

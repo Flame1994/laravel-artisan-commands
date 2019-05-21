@@ -1,5 +1,7 @@
 <?php
+
 namespace Rhaarhoff\LaravelArtisanCommands\Console\Services;
+
 use Illuminate\Console\GeneratorCommand;
 class Create extends GeneratorCommand
 {
