@@ -26,7 +26,8 @@ class CommandServiceProvider extends ServiceProvider
         // used to boot any routes, event listeners, or any other functionality you want to add to your package
         if ($this->app->runningInConsole()) {
             $this->commands([
-                Console\Services\Create::class,
+                Console\Repositories\CreateRepository::class,
+                Console\Services\CreateService::class,
             ]);
         }
     }
