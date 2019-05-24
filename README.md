@@ -42,10 +42,17 @@ public function register()
 
 ### Commands
 
-Below you can find all the commands that you can use.
+Below you can find all the commands that you can use, including the parameters that you can specify.
 
-```bash
-php artisan make:service ExampleService
+```
+COMMAND                     PARAMETER               DESCRIPTION
+------------------------------------------------------------------------------------------------------------------------------------------------
+make:service <name>                                 Generates a basic service class
+make:service <name>         -m <model>              Generates a basic service class as well as a model
+make:service <name>         -c                      Generates a service class with a constructor
+make:service <name>         -r <repository>         Generates a service class as well as a repository
+make:repository <name>                              Generates a basic repository class
+make:repository <name>      -m <model>              Generates a repository class as well as a model
 ```
 
 ### License

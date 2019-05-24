@@ -30,7 +30,7 @@ class CreateService extends GeneratorCommand
     protected $type = 'Service';
 
     public function getStub() {
-        if ($this->option('constructor')) {
+        if ($this->option('constructor') && !$this->option('repository')) {
             return __DIR__.'/stubs/service.constructor.stub';
         } elseif($this->option('repository')) {
             return __DIR__.'/stubs/service.repo.stub';
