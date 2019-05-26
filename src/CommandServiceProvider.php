@@ -13,7 +13,6 @@ class CommandServiceProvider extends ServiceProvider
     public function register()
     {
         // used to bind any classes or functionality into the app container
-//        $this->app->register('Rhaarhoff\LaravelArtisanCommands\CommandServiceProvider');
     }
 
     /**
@@ -28,6 +27,7 @@ class CommandServiceProvider extends ServiceProvider
             $this->commands([
                 Console\Repositories\CreateRepository::class,
                 Console\Services\CreateService::class,
+                Console\Layers\CreateLayer::class,
             ]);
         }
     }

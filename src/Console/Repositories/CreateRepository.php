@@ -63,9 +63,9 @@ class CreateRepository extends GeneratorCommand
 
         $replace = [];
 
-        if ($this->option('model')) {
-            $replace = $this->buildModelReplacements($replace);
-        }
+//        if ($this->option('model')) {
+//        }
+        $replace = $this->buildModelReplacements($replace);
 
         $replace["use {$repoNamespace}\Repository;\n"] = '';
 
@@ -85,9 +85,7 @@ class CreateRepository extends GeneratorCommand
         $modelClass = $this->parseModel($this->option('model'));
 
         if (! class_exists($modelClass)) {
-            if ($this->confirm("A {$modelClass} model does not exist. Do you want to generate it?", true)) {
-                $this->call('make:model', ['name' => $modelClass]);
-            }
+            $this->call('make:model', ['name' => $modelClass]);
         }
 
         return array_merge($replace, [
@@ -128,7 +126,7 @@ class CreateRepository extends GeneratorCommand
     protected function getOptions()
     {
         return [
-            ['model', 'm', InputOption::VALUE_OPTIONAL, 'Generate a model for the given repository.'],
+            ['model', 'm', InputOption::VALUE_REQUIRED, 'Generate a model for the given repository.'],
         ];
     }
 

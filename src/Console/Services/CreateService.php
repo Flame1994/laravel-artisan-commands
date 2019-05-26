@@ -91,13 +91,11 @@ class CreateService extends GeneratorCommand
         $repoClass = $this->parseRepo($this->option('repository'));
 
         if (! class_exists($repoClass)) {
-            if ($this->confirm('A ' . class_basename($repoClass) . ' repository does not exist. Do you want to generate it?', true)) {
-                if ($this->option('model')) {
-                    Log::info('Model was selected as well: ' . $this->option('model'));
-                    $this->call('make:repository', ['name' => $repoClass, '-m' => $this->option('model')]);
-                } else {
-                    $this->call('make:repository', ['name' => $repoClass]);
-                }
+            if ($this->option('model')) {
+                Log::info('Model was selected as well: ' . $this->option('model'));
+                $this->call('make:repository', ['name' => $repoClass, '-m' => $this->option('model')]);
+            } else {
+                $this->call('make:repository', ['name' => $repoClass]);
             }
         } else {
             $this->info('Specified repository already exists. Linking service to ' . class_basename($repoClass) . ' repository.');
@@ -143,9 +141,7 @@ class CreateService extends GeneratorCommand
         $modelClass = $this->parseModel($this->option('model'));
 
         if (! class_exists($modelClass)) {
-            if ($this->confirm("A {$modelClass} model does not exist. Do you want to generate it?", true)) {
-                $this->call('make:model', ['name' => $modelClass]);
-            }
+            $this->call('make:model', ['name' => $modelClass]);
         }
 
         return array_merge($replace, [
@@ -186,7 +182,7 @@ class CreateService extends GeneratorCommand
     protected function getOptions()
     {
         return [
-            ['repository', 'r', InputOption::VALUE_REQUIRED, 'Generate a repository for the given service.'],
+            ['repository', 'y', InputOption::VALUE_REQUIRED, 'Generate a repository for the given service.'],
 
             ['constructor', 'c', InputOption::VALUE_NONE, 'Generate a constructor for the given service.'],
 
