@@ -20,7 +20,7 @@ class CreateRepository extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new repository class';
+    protected $description = 'Create a new repository class.';
     /**
      * The name and signature of the console command.
      *
@@ -63,11 +63,9 @@ class CreateRepository extends GeneratorCommand
 
         $replace = [];
 
-//        if ($this->option('model')) {
-//        }
         $replace = $this->buildModelReplacements($replace);
 
-        $replace["use {$repoNamespace}\Repository;\n"] = '';
+        $replace["use ${repoNamespace}\Repository;\n"] = '';
 
         return str_replace(
             array_keys($replace), array_values($replace), parent::buildClass($name)

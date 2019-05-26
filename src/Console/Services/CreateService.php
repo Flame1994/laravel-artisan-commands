@@ -73,7 +73,7 @@ class CreateService extends GeneratorCommand
             $replace = $this->buildModelReplacements($replace);
         }
 
-        $replace["use {$serviceNamespace}\Service;\n"] = '';
+        $replace["use ${serviceNamespace}\Service;\n"] = '';
 
         return str_replace(
             array_keys($replace), array_values($replace), parent::buildClass($name)
@@ -92,13 +92,13 @@ class CreateService extends GeneratorCommand
 
         if (! class_exists($repoClass)) {
             if ($this->option('model')) {
-                Log::info('Model was selected as well: ' . $this->option('model'));
+                Log::info('Selected Model: ' . $this->option('model'));
                 $this->call('make:repository', ['name' => $repoClass, '-m' => $this->option('model')]);
             } else {
                 $this->call('make:repository', ['name' => $repoClass]);
             }
         } else {
-            $this->info('Specified repository already exists. Linking service to ' . class_basename($repoClass) . ' repository.');
+            $this->info('Repository already exists. Linking service to ' . class_basename($repoClass) . ' repository.');
         }
 
         return array_merge($replace, [
