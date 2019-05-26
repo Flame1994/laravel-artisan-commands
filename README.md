@@ -45,14 +45,24 @@ public function register()
 Below you can find all the commands that you can use, including the parameters that you can specify.
 
 ```
-COMMAND                     PARAMETER               DESCRIPTION
-------------------------------------------------------------------------------------------------------------------------------------------------
-make:service <name>                                 Generates a basic service class
-make:service <name>         -m <model>              Generates a basic service class as well as a model
-make:service <name>         -c                      Generates a service class with a constructor
-make:service <name>         -r <repository>         Generates a service class as well as a repository
-make:repository <name>                              Generates a basic repository class
-make:repository <name>      -m <model>              Generates a repository class as well as a model
+COMMAND                     PARAMETER             DESCRIPTION
+-----------------------------------------------------------------------------------------------------------------------
+make:service <name>                               Generates a basic service class
+make:service <name>         -m <model>            Generates a basic service class as well as a model
+make:service <name>         -c                    Generates a service class with a constructor
+make:service <name>         -r <repository>       Generates a service class as well as a repository
+make:repository <name>                            Generates a basic repository class
+make:repository <name>      -m <model>            Generates a repository class as well as a model
+make:layer <name>                                 Generates only a model class if no parameters are specified
+make:layer <name>           -c                    Generates a new controller class for the model
+make:layer <name>           -s                    Generates a new service class for the model
+make:layer <name>           -y                    Generates a new repository class for the model
+make:layer <name>           -f                    Generates a new factory class for the model
+make:layer <name>           -m                    Generates a new migration for the model
+make:layer <name>           -p                    Indicates if the model should be a custom intermediate table model
+make:layer <name>           -r                    Indicates if the generated controller should be a resource controller
+make:layer <name>           -all                  Generates a migration, factory, resource controller, service
+                                                  and repository for the model
 ```
 
 ### License
