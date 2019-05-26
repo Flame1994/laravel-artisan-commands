@@ -1,6 +1,6 @@
 {
     "name": "rhaarhoff/laravel-artisan-commands",
-    "description": "Artisan commands for easier use",
+    "description": "Useful Artisan commands for generating services, repositories and more.",
     "keywords": ["laravel", "commands"],
     "license": "MIT",
     "type": "commands",

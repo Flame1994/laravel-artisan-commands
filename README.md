@@ -6,24 +6,23 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 
 ### Description
-This package was created with the goal of helping the developer generate
-their required files easily, such as services, repositories and more.
+This package provides some useful Artisan commands for generating services, repositories and more.
 
 ### Installation
 
-Require this package with composer using the following command:
+Require this package with Composer using the following command:
 
 ```bash
 composer require rhaarhoff/laravel-artisan-commands
 ```
 
-After updating composer, add the service provider to the `providers` array in `config/app.php`
+After updating Composer, add the service provider to the `providers` array in `config/app.php`:
 
 ```php
-Rhaarhoff\LaravelArtisanCommands\CommandServiceProvider::class,
+Rhaarhoff\LaravelArtisanCommands\CommandServiceProvider::class
 ```
 
-Run dump-autoload
+Run the `dump-autoload` command:
 ```bash
 composer dump-autoload
 ```
@@ -67,7 +66,7 @@ make:layer <name>           -all                  Generates a migration, factory
 
 ### License
 
-The Laravel Artisan Commands is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The Laravel Artisan Commands is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
 
 [ico-version]: https://poser.pugx.org/rhaarhoff/laravel-artisan-commands/v/stable

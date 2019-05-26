@@ -20,7 +20,7 @@ class CreateLayer extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new Eloquent model class with specified layers attached';
+    protected $description = 'Create a new Eloquent model class with the specified layers attached.';
 
     /**
      * The type of class being generated.
@@ -103,7 +103,7 @@ class CreateLayer extends GeneratorCommand
         }
 
         $this->call('make:migration', [
-            'name' => "create_{$table}_table",
+            'name' => "create_${table}_table",
             '--create' => $table,
         ]);
     }
@@ -120,7 +120,7 @@ class CreateLayer extends GeneratorCommand
         $modelName = $this->qualifyClass($this->getNameInput());
 
         $this->call('make:controller', [
-            'name' => "{$controller}Controller",
+            'name' => "${controller}Controller",
             '--model' => $this->option('resource') ? $modelName : null,
         ]);
     }
@@ -134,10 +134,10 @@ class CreateLayer extends GeneratorCommand
     {
         $service = Str::studly(class_basename($this->argument('name')));
 
-        $modelName = $this->qualifyClass($this->getNameInput());
+        $this->qualifyClass($this->getNameInput());
 
         $this->call('make:service', [
-            'name' => "{$service}Service"
+            'name' => "${service}Service"
         ]);
     }
 
@@ -153,8 +153,8 @@ class CreateLayer extends GeneratorCommand
         $modelName = $this->qualifyClass($this->getNameInput());
 
         $this->call('make:service', [
-            'name' => "{$repo}Service",
-            '-r' => "{$repo}Repository",
+            'name' => "${repo}Service",
+            '-r' => "${repo}Repository",
             '-m' => $modelName,
         ]);
     }
@@ -171,7 +171,7 @@ class CreateLayer extends GeneratorCommand
         $modelName = $this->qualifyClass($this->getNameInput());
 
         $this->call('make:repository', [
-            'name' => "{$repo}Repository",
+            'name' => "${repo}Repository",
             '-m' => $modelName,
         ]);
     }
@@ -209,23 +209,23 @@ class CreateLayer extends GeneratorCommand
     protected function getOptions()
     {
         return [
-            ['all', 'a', InputOption::VALUE_NONE, 'Generate a migration, factory, resource controller, service & repository for the model'],
+            ['all', 'a', InputOption::VALUE_NONE, 'Generate a migration, factory, resource controller, service & repository for the model.'],
 
-            ['controller', 'c', InputOption::VALUE_NONE, 'Create a new controller for the model'],
+            ['controller', 'c', InputOption::VALUE_NONE, 'Create a new controller for the model.'],
 
-            ['service', 's', InputOption::VALUE_NONE, 'Create a new service for the model'],
+            ['service', 's', InputOption::VALUE_NONE, 'Create a new service for the model.'],
 
-            ['repository', 'y', InputOption::VALUE_NONE, 'Create a new repository for the model'],
+            ['repository', 'y', InputOption::VALUE_NONE, 'Create a new repository for the model.'],
 
-            ['factory', 'f', InputOption::VALUE_NONE, 'Create a new factory for the model'],
+            ['factory', 'f', InputOption::VALUE_NONE, 'Create a new factory for the model.'],
 
-            ['force', null, InputOption::VALUE_NONE, 'Create the class even if the model already exists'],
+            ['force', null, InputOption::VALUE_NONE, 'Create the class even if the model already exists.'],
 
-            ['migration', 'm', InputOption::VALUE_NONE, 'Create a new migration file for the model'],
+            ['migration', 'm', InputOption::VALUE_NONE, 'Create a new migration file for the model.'],
 
-            ['pivot', 'p', InputOption::VALUE_NONE, 'Indicates if the generated model should be a custom intermediate table model'],
+            ['pivot', 'p', InputOption::VALUE_NONE, 'Indicates if the generated model should be a custom intermediate table model.'],
 
-            ['resource', 'r', InputOption::VALUE_NONE, 'Indicates if the generated controller should be a resource controller'],
+            ['resource', 'r', InputOption::VALUE_NONE, 'Indicates if the generated controller should be a resource controller.'],
         ];
     }
 }
