@@ -69,7 +69,7 @@ class CreateLayer extends GeneratorCommand
             }
         }
 
-        if ($this->option('repository')) {
+        if ($this->option('repository') && !$this->option('service')) {
             $this->createRepository();
         }
     }
@@ -154,7 +154,7 @@ class CreateLayer extends GeneratorCommand
 
         $this->call('make:service', [
             'name' => "${repo}Service",
-            '-r' => "${repo}Repository",
+            '-y' => "${repo}Repository",
             '-m' => $modelName,
         ]);
     }
